@@ -1,9 +1,12 @@
+import Signup from "./components/Signup";
 
 
 function App() {
   return (
     <div className="App">
-      <h1>Whaaaaat</h1>
+
+        <Signup />
+
     </div>
   );
 }
