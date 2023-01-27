@@ -29,26 +29,28 @@ function Signup() {
     }
 
     return (
-        <>
-        <h2>Sign Up</h2>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label htmlFor="email">Email:</label>
-                    <input type="email" id="email" value={email} onChange={e => setEmail(e.target.value)} />
-                </div>
-                <div>
-                    <label htmlFor="password">Password:</label>
-                    <input type="password" id="password" value={password} onChange={e => setPassword(e.target.value)} />
-                </div>
-                <div>
-                    <label htmlFor="confirmPassword">Confirm Password:</label>
-                    <input type="password" id="confirmPassword" value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)} />
-                </div>
-                <button type="submit">Sign Up</button>
-            </form>
-            <p>Have an account? <Link to='/login'>Log In</Link></p>
-            {error && <p>{error}</p>} {/* <-- display error message if there is one */}
-        </>
+
+        <div className='login-container'>
+
+            <h2>Sign Up</h2>
+                <form className='login-form' onSubmit={handleSubmit}>
+                    <div>
+                        <label htmlFor="email">Email:</label>
+                        <input type="email" id="email" value={email} onChange={e => setEmail(e.target.value)} />
+                    </div>
+                    <div>
+                        <label htmlFor="password">Password:</label>
+                        <input type="password" id="password" value={password} onChange={e => setPassword(e.target.value)} />
+                    </div>
+                    <div>
+                        <label htmlFor="confirmPassword">Confirm Password:</label>
+                        <input type="password" id="confirmPassword" value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)} />
+                    </div>
+                    <button type="submit">Sign Up</button>
+                </form>
+                <p>Have an account? <Link to='/login'>Log In</Link></p>
+                {error && <p>{error}</p>} {/* <-- display error message if there is one */}
+        </div>
     )
 }
 

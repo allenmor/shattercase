@@ -42,9 +42,10 @@ function UpdateProfile() {
   };
 
   return (
-    <>
+
+    <div className="login-container">
       <h2>Update Profile</h2>
-      <form onSubmit={handleSubmit}>
+      <form className="login-form" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="email">Email:</label>
           <input
@@ -81,7 +82,8 @@ function UpdateProfile() {
       </p>
       {error && <p>{error}</p>}{" "}
       {/* <-- display error message if there is one */}
-    </>
+    </div>
+
   );
 }
 

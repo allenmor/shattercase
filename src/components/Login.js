@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useAuth } from "../contexts/AuthContext";
 import { Link, useNavigate } from "react-router-dom";
+import shatterlogo from "../images/shatterandcase-1 (1).png";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -8,7 +9,7 @@ function Login() {
   const [error, setError] = useState("");
   const { login } = useAuth(); // <-- changed the function call to login instead of signup
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -17,16 +18,17 @@ function Login() {
       await login(email, password);
       console.log("Login successful!");
       // redirect user to success page or display success message
-      navigate('/')
+      navigate("/");
     } catch (error) {
       setError(error.message);
     }
   };
 
   return (
-    <>
-    <h2>Log In</h2>
-      <form onSubmit={handleSubmit}>
+    <div className="login-container">
+      <img className="shatterlogo" alt="shatterlogo" src={shatterlogo} />
+      <h2>Log In</h2>
+      <form className="login-form" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="email">Email:</label>
           <input
@@ -47,10 +49,12 @@ function Login() {
         </div>
         <button type="submit">Log In</button>
       </form>
-      <p>Need an account? <Link to='/signup'>Sign Up</Link></p>
-      <Link to='/forgot-password'>Forgot Password</Link>
+      <p>
+        Need an account? <Link to="/signup">Sign Up</Link>
+      </p>
+      <Link to="/forgot-password">Forgot Password</Link>
       {error && <p>{error}</p>}
-    </>
+    </div>
   );
 }
 export default Login;
