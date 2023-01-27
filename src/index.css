@@ -53,3 +53,71 @@ button[type="submit"] {
   margin-bottom: 1rem;
   margin-top: 50px;
 }
+
+
+/* DASHBOARD */
+
+.dashboard-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.dashboard-content {
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dashboard h2 {
+  margin-bottom: 1rem;
+}
+
+.dashboard p {
+  margin-bottom: 1rem;
+}
+
+.dashboard form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.dashboard label {
+  margin-bottom: 0.5rem;
+  width: 90%;
+}
+
+.dashboard input, .dashboard textarea {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid gray;
+  width: 95%;
+}
+
+.dashboard button[type="submit"] {
+  background-color: green;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  margin-top: 1rem;
+}
+
+.dashboard textarea {
+  resize: vertical;
+  min-height: 100px;
+  max-height: 300px;
+  overflow: auto;
+}
+
