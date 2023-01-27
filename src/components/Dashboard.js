@@ -1,21 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { useAuth } from "../contexts/AuthContext";
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import axios from "axios";
 
 function Dashboard() {
-  // const [error, setError] = useState('')
   const { currentUser, logout } = useAuth();
   const navigate = useNavigate();
 
   async function handleLogOut() {
-    // setError('')
-
     try {
       await logout();
       navigate("/login");
     } catch {
-      // setError('Failed to logout')
+      // handle error
     }
   }
 
@@ -24,16 +21,25 @@ function Dashboard() {
   const getLocation = () => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition((position) => {
-        setLocation({
-          lat: position.coords.latitude,
-          lng: position.coords.longitude,
-        });
+        const lat = position.coords.latitude;
+        const lng = position.coords.longitude;
+        const url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=${process.env.REACT_APP_GOOGLE_MAPS_KEY}`;
+
+        axios
+          .get(url)
+          .then((response) => {
+            const address = response.data.results[0].formatted_address;
+            setLocation({ address });
+          })
+          .catch((error) => {
+            console.log(error);
+          });
       });
     } else {
       // Handle the case where geolocation is not supported by the browser
     }
   };
-  
+
   return (
     <div>
       Dashboard
@@ -43,8 +49,7 @@ function Dashboard() {
       <button onClick={handleLogOut}>Log Out</button>
       <div>
         <button onClick={getLocation}>Get Location</button>
-        {location.lat && <p>Latitude: {location.lat}</p>}
-        {location.lng && <p>Longitude: {location.lng}</p>}
+        {location.address && <p>Address: {location.address}</p>}
       </div>
     </div>
   );
