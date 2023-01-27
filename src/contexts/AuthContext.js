@@ -20,12 +20,16 @@ export function AuthProvider({ children }) {
       setCurrentUser(user);
     });
 
-    return unsubscribe
+    return unsubscribe;
   }, []);
+
   const value = {
     currentUser,
     signup
   };
 
-  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
+  return (
+  <AuthContext.Provider value={value}>
+    {children}
+    </AuthContext.Provider>);
 }

@@ -5,18 +5,25 @@ function Signup() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
-    const signup = useAuth()
+    const {signup} = useAuth() // <-- use destructuring to access the signup function directly
 
-    const handleSubmit = (event) => {
+  
+    const handleSubmit = async (event) => {
         event.preventDefault();
         if (password !== confirmPassword) {
-            console.error("Error: Passwords do not match");
-            return;
+          console.error("Error: Passwords do not match");
+          return;
         }
-        // Perform signup logic here (e.g. send data to server, create user account, etc.)
-        signup(email, password)
-        console.log('Signup form submitted. Email:', email, 'Password:', password);
-    }
+    
+        try {
+          await signup(email, password);
+          console.log("Signup successful!");
+          // redirect user to success page or display success message
+        } catch (error) {
+          console.error(error);
+          // display error message
+        }
+      }
 
     return (
         <form onSubmit={handleSubmit}>
