@@ -142,6 +142,7 @@ button[type="submit"] {
 }
 .models-div {
   display: flex;
+  overflow-x: scroll;
 }
 .models-div p {
   margin: 5px;
