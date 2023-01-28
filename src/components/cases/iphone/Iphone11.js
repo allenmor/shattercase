@@ -8,8 +8,8 @@ import Iphone11Card from './Iphone11Card'
 
 function Iphone11() {
     const [cases, setCases] = useState([])
-    const casesCollectionRef = collection(db, 'iphone11')
     useEffect(()=>{
+      const casesCollectionRef = collection(db, 'iphone11')
       const getCases = async() => {
         const data = await getDocs(casesCollectionRef)
         // setCases(data.docs.map((doc) => ({...doc.data()})))
@@ -23,7 +23,7 @@ function Iphone11() {
       <NavBar />
       <CasesNav />
       {cases.map((el, i) => {
-        return <Iphone11Card iphone={el}/>
+        return <Iphone11Card key={i} iphone={el}/>
       })}
     </div>
   )
