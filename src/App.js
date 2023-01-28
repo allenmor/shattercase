@@ -13,6 +13,8 @@ import Iphone11ProMax from "./components/cases/iphone/Iphone11ProMax";
 import Iphone12Mini from "./components/cases/iphone/Iphone12Mini";
 import Iphone12 from "./components/cases/iphone/Iphone12";
 import Iphone12ProMax from "./components/cases/iphone/Iphone12ProMax";
+import Iphone13Mini from "./components/cases/iphone/Iphone13Mini";
+import Iphone13 from "./components/cases/iphone/Iphone13";
 function App() {
   return (
     <div className="App">
@@ -46,6 +48,8 @@ function App() {
           <Route path="/iphone12mini" element={<Iphone12Mini />} />
           <Route path="/iphone12" element={<Iphone12 />} />
           <Route path="/iphone12promax" element={<Iphone12ProMax />} />
+          <Route path="/iphone13mini" element={<Iphone13Mini />} />
+          <Route path="/iphone13" element={<Iphone13 />} />
         </Routes>
       </AuthProvider>
     </div>
