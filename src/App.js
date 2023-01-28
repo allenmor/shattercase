@@ -9,6 +9,7 @@ import UpdateProfile from "./components/UpdateProfile";
 import Cases from "./components/Cases";
 import Iphone11 from "./components/cases/iphone/Iphone11";
 import Iphone11Pro from "./components/cases/iphone/Iphone11Pro";
+import Iphone11ProMax from "./components/cases/iphone/Iphone11ProMax";
 function App() {
   return (
     <div className="App">
@@ -38,6 +39,7 @@ function App() {
           <Route path="/cases" element={<Cases />} />
           <Route path="/iphone11" element={<Iphone11 />} />
           <Route path="/iphone11pro" element={<Iphone11Pro />} />
+          <Route path="/iphone11promax" element={<Iphone11ProMax />} />
         </Routes>
       </AuthProvider>
     </div>
