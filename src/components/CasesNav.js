@@ -1,13 +1,20 @@
 import React, { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 
 function CasesNav() {
+    const location = useLocation();
     const [selected, setSelected] = useState(localStorage.getItem('selected') || "iphone11");
     const navigate = useNavigate()
 
     useEffect(() => {
         localStorage.setItem('selected', selected)
     }, [selected])
+
+    useEffect(() => {
+        const pathname = location.pathname.substring(1);
+        setSelected(pathname);
+        localStorage.setItem('selected', pathname)
+    }, [location])
 
     function handleChange(e) {
         navigate(`/${e.target.value}`)
