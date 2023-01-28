@@ -29,6 +29,9 @@ function CasesNav() {
     function handleIphone13(){
         navigate('/iphone13')
     }
+    function handleIphone13ProMax(){
+        navigate('/iphone13promax')
+    }
   return (
     <div>
         <p className='cases-nav-links' onClick={handleIphone11}>Iphone 11 </p>
@@ -39,6 +42,7 @@ function CasesNav() {
         <p className='cases-nav-links' onClick={handleIphone12ProMax}>Iphone 12 Pro Max</p>
         <p className='cases-nav-links' onClick={handleIphone13Mini}>Iphone 13 Mini</p>
         <p className='cases-nav-links' onClick={handleIphone13}>Iphone 13</p>
+        <p className='cases-nav-links' onClick={handleIphone13ProMax}>Iphone 13 Pro Max</p>
     </div>
   )
 }
