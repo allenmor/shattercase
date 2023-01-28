@@ -9,7 +9,7 @@ function Iphone11() {
   const [cases, setCases] = useState([])
   useEffect(()=>{
   
-    fetch(`${process.env.REACT_APP_JSON_URL}`)
+    fetch('https://raw.githubusercontent.com/allenmor/shattercase/main/db.json')
     .then(res => res.json())
     .then(data => {
       setCases(data.iphone11)
@@ -21,7 +21,7 @@ function Iphone11() {
       <CasesNav />
       <h1>Iphone 11 cases</h1>
       {cases.map((el, i) => {
-        return <Iphone11Card iphone={el}/>
+        return <Iphone11Card key={i} iphone={el}/>
       })}
     </div>
   )
