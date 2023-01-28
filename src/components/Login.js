@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useAuth } from "../contexts/AuthContext";
 import { Link, useNavigate } from "react-router-dom";
 import shatterlogo from "../images/shatterandcase-1 (1).png";
-import Cases from "./Cases";
+
 import NavBar from "./NavBar";
 function Login() {
   const [email, setEmail] = useState("");

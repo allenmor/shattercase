@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { db } from '../../../firebase'
-import {collection, doc, getDocs} from 'firebase/firestore'
+import {collection, getDocs} from 'firebase/firestore'
 import NavBar from '../../NavBar'
 import CasesNav from '../../CasesNav'
 import Iphone11Card from './Iphone11Card'
