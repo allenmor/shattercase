@@ -59,9 +59,9 @@ button[type="submit"] {
 
 .dashboard-container {
   display: flex;
-  justify-content: center;
   align-items: center;
   height: 100vh;
+  flex-direction: column;
 }
 
 .dashboard-content {
@@ -121,3 +121,31 @@ button[type="submit"] {
   overflow: auto;
 }
 
+/* NAVBAR */
+.nav {
+  display: flex;
+  background-color: rgb(32,33,36);
+  width: 100%;
+  justify-content: space-between;
+}
+
+.nav p {
+  margin-right: 10px;
+  text-decoration: none;
+  color: white;
+  padding: 5px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Media query for screens smaller than 600px */
+@media (max-width: 600px) {
+  .nav-links {
+    flex-direction: column;
+  }
+
+  .nav-links a {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}

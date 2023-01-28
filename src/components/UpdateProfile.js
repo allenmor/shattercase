@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useAuth } from "../contexts/AuthContext";
 import { Link, useNavigate } from "react-router-dom";
+import NavBar from "./NavBar";
 function UpdateProfile() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -44,6 +45,7 @@ function UpdateProfile() {
   return (
 
     <div className="login-container">
+      <NavBar email={currentUser.email}/>
       <h2>Update Profile</h2>
       <form className="login-form" onSubmit={handleSubmit}>
         <div>

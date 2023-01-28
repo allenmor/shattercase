@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import { useAuth } from "../contexts/AuthContext";
-import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import NavBar from "./NavBar";
 
 function Dashboard() {
-  const { currentUser, logout } = useAuth();
-  const navigate = useNavigate();
-
+  const { currentUser } = useAuth();
 
   const initialFormData = {
     name: "",
@@ -23,14 +21,7 @@ function Dashboard() {
     });
   };
 
-  async function handleLogOut() {
-    try {
-      await logout();
-      navigate("/login");
-    } catch {
-      // handle error
-    }
-  }
+
 
   const getLocation = () => {
     if (navigator.geolocation) {
@@ -64,16 +55,10 @@ function Dashboard() {
 
   return (
     <div className="dashboard-container">
+      <NavBar email={currentUser.email}/>
       <div className="dashboard-content">
-        Dashboard
+        <h2>Get a Quote</h2>
         <div className="dashboard">
-          <h2>Profile</h2>
-          <p>
-            <strong>Email: </strong> {currentUser.email}
-          </p>
-          <Link to="update-profile">Update Profile</Link>
-          <button onClick={handleLogOut}>Log Out</button>
- 
           <form onSubmit={handleSubmit}>
             <label>Location:</label>
             <input
@@ -82,6 +67,7 @@ function Dashboard() {
               onChange={handleChange}
               type="text"
               value={formData.address}
+              placeholder='Enter your location'
             />
             <button onClick={getLocation}>Get Current Location</button>
             <br />
@@ -108,58 +94,14 @@ function Dashboard() {
             />
             <br />
             <label>Device:</label>
-            <select
+            <input
+              type="text"
               required
               name="device"
               onChange={handleChange}
               value={formData.device}
-            >
-              <option value="">Please select a device</option>
-              <option value="iPhone">iPhone</option>
-              <option value="iPhone 3G">iPhone 3G</option>
-              <option value="iPhone 3GS">iPhone 3GS</option>
-              <option value="iPhone 4">iPhone 4</option>
-              <option value="iPhone 4S">iPhone 4S</option>
-              <option value="iPhone 5">iPhone 5</option>
-              <option value="iPhone 5c">iPhone 5c</option>
-              <option value="iPhone 5s">iPhone 5s</option>
-              <option value="iPhone 6">iPhone 6</option>
-              <option value="iPhone 6 Plus">iPhone 6 Plus</option>
-              <option value="iPhone 6s">iPhone 6s</option>
-              <option value="iPhone 6s Plus">iPhone 6s Plus</option>
-              <option value="iPhone SE (1st generation)">
-                iPhone SE (1st generation)
-              </option>
-              <option value="iPhone 7">iPhone 7</option>
-              <option value="iPhone 7 Plus">iPhone 7 Plus</option>
-              <option value="iPhone 8">iPhone 8</option>
-              <option value="iPhone 8 Plus">iPhone 8 Plus</option>
-              <option value="iPhone X">iPhone X</option>
-              <option value="iPhone XR">iPhone XR</option>
-              <option value="iPhone XS">iPhone XS</option>
-              <option value="iPhone XS Max">iPhone XS Max</option>
-              <option value="iPhone 11">iPhone 11</option>
-              <option value="iPhone 11 Pro">iPhone 11 Pro</option>
-              <option value="iPhone 11 Pro Max">iPhone 11 Pro Max</option>
-              <option value="iPhone SE (2nd generation)">
-                iPhone SE (2nd generation)
-              </option>
-              <option value="iPhone 12 mini">iPhone 12 mini</option>
-              <option value="iPhone 12">iPhone 12</option>
-              <option value="iPhone 12 Pro">iPhone 12 Pro</option>
-              <option value="iPhone 12 Pro Max">iPhone 12 Pro Max</option>
-              <option value="iPhone 13 mini">iPhone 13 mini</option>
-              <option value="iPhone 13">iPhone 13</option>
-              <option value="iPhone 13 Pro">iPhone 13 Pro</option>
-              <option value="iPhone 13 Pro Max">iPhone 13 Pro Max</option>
-              <option value="iPhone SE (3rd generation)">
-                iPhone SE (3rd generation)
-              </option>
-              <option value="iPhone 14">iPhone 14</option>
-              <option value="iPhone 14 Plus">iPhone 14 Plus</option>
-              <option value="iPhone 14 Pro">iPhone 14 Pro</option>
-              <option value="iPhone 14 Pro Max">iPhone 14 Pro Max</option>
-            </select>
+              placeholder='Enter your device model'
+            />
 
             <br />
             <label>Issue:</label>
