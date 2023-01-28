@@ -1,5 +1,6 @@
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
+import { getFirestore } from "firebase/firestore";
 
 const app = firebase.initializeApp({
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -9,8 +10,19 @@ const app = firebase.initializeApp({
   messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
   appId: process.env.REACT_APP_FIREBASE_APP_ID,
   measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID
-});
+},'app');
+
+const cases = firebase.initializeApp({
+  apiKey: process.env.REACT_APP_CASES_APIKEY,
+  authDomain: process.env.REACT_APP_CASES_AUTHDOMAIN,
+  projectId: process.env.REACT_APP_CASES_PROJECTID,
+  storageBucket: process.env.REACT_APP_CASES_STORAGEBUCKET,
+  messagingSenderId: process.env.REACT_APP_CASES_MESSAGINGSENDERID,
+  appId: process.env.REACT_APP_CASES_APPID,
+  measurementId: process.env.REACT_APP_CASES_MEASUREMENTID
+},'cases');
 
 
+export const db = getFirestore(cases)
 export const auth = app.auth();
 export default app;

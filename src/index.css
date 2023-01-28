@@ -137,7 +137,9 @@ button[type="submit"] {
   cursor: pointer;
   user-select: none;
 }
-
+.cases-nav-links {
+  color: blue;
+}
 /* Media query for screens smaller than 600px */
 @media (max-width: 600px) {
   .nav-links {

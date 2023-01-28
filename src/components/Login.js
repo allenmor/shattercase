@@ -2,12 +2,15 @@ import React, { useState } from "react";
 import { useAuth } from "../contexts/AuthContext";
 import { Link, useNavigate } from "react-router-dom";
 import shatterlogo from "../images/shatterandcase-1 (1).png";
-
+import Cases from "./Cases";
+import NavBar from "./NavBar";
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const { login } = useAuth(); // <-- changed the function call to login instead of signup
+
+
 
   const navigate = useNavigate();
 
@@ -26,6 +29,7 @@ function Login() {
 
   return (
     <div className="login-container">
+      <NavBar />
       <img className="shatterlogo" alt="shatterlogo" src={shatterlogo} />
       <h2>Log In</h2>
       <form className="login-form" onSubmit={handleSubmit}>
