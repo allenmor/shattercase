@@ -4,7 +4,7 @@ import { useAuth } from '../contexts/AuthContext';
 
 const NavBar = ({email}) => {
 
-  const { logout } = useAuth();
+  const { logout, currentUser } = useAuth();
 
     const navigate = useNavigate()
 
@@ -21,14 +21,14 @@ const NavBar = ({email}) => {
         }
       }
       function handleCasesClick() {
-          navigate('/cases')
+          navigate('/iphone11')
       }
   return (
       <div className='nav'>
           <p>{email}</p>
           <p onClick={handleCasesClick}>Cases</p>
-          <p onClick={handleUpdateProfileClick}>Update Profile</p>
-          <p onClick={handleLogOut}>Logout</p>
+          {currentUser ? <p onClick={handleUpdateProfileClick}>Update Profile</p>: ''}
+          <p onClick={handleLogOut}>{currentUser ? 'Log Out': 'Log In'}</p>
       </div>
   );
 }

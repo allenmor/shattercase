@@ -1,66 +1,41 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 function CasesNav() {
-
+    const [selected, setSelected] = useState(localStorage.getItem('selected') || "iphone11");
     const navigate = useNavigate()
 
-    function handleIphone11(){
-        navigate('/iphone11')
+    useEffect(() => {
+        localStorage.setItem('selected', selected)
+    }, [selected])
+
+    function handleChange(e) {
+        navigate(`/${e.target.value}`)
+        setSelected(e.target.value);
+        localStorage.setItem('selected', e.target.value)
     }
-    function handleIphone11Pro(){
-        navigate('/iphone11pro')
-    }
-    function handleIphone11ProMax(){
-        navigate('/iphone11promax')
-    }
-    function handleIphone12Mini(){
-        navigate('/iphone12mini')
-    }
-    function handleIphone12(){
-        navigate('/iphone12')
-    }
-    function handleIphone12ProMax(){
-        navigate('/iphone12promax')
-    }
-    function handleIphone13Mini(){
-        navigate('/iphone13mini')
-    }
-    function handleIphone13(){
-        navigate('/iphone13')
-    }
-    function handleIphone13ProMax(){
-        navigate('/iphone13promax')
-    }
-    function handleIphone14(){
-        navigate('/iphone14')
-    }
-    function handleIphone14Plus(){
-        navigate('/iphone14Plus')
-    }
-    function handleIphone14Pro(){
-        navigate('/iphone14pro')
-    }
-    function handleIphone14ProMax(){
-        navigate('/iphone14promax')
-    }
-  return (
-    <div className='models-div'>
-        <p className='cases-nav-links' onClick={handleIphone11}>Iphone 11 </p>
-        <p className='cases-nav-links' onClick={handleIphone11Pro}>Iphone 11 Pro</p>
-        <p className='cases-nav-links' onClick={handleIphone11ProMax}>Iphone 11 Pro Max</p>
-        <p className='cases-nav-links' onClick={handleIphone12Mini}>Iphone 12 Mini</p>
-        <p className='cases-nav-links' onClick={handleIphone12}>Iphone 12/ 12 Pro</p>
-        <p className='cases-nav-links' onClick={handleIphone12ProMax}>Iphone 12 Pro Max</p>
-        <p className='cases-nav-links' onClick={handleIphone13Mini}>Iphone 13 Mini</p>
-        <p className='cases-nav-links' onClick={handleIphone13}>Iphone 13</p>
-        <p className='cases-nav-links' onClick={handleIphone13ProMax}>Iphone 13 Pro Max</p>
-        <p className='cases-nav-links' onClick={handleIphone14}>Iphone 14</p>
-        <p className='cases-nav-links' onClick={handleIphone14Plus}>Iphone 14 Plus</p>
-        <p className='cases-nav-links' onClick={handleIphone14Pro}>Iphone 14 Pro</p>
-        <p className='cases-nav-links' onClick={handleIphone14ProMax}>Iphone 14 Pro Max</p>
-    </div>
-  )
+    
+
+    return (
+        <div className='models-div'>
+            <h4>Choose Your Device</h4>
+            <select value={selected} onChange={handleChange}>
+                <option value="iphone11">Iphone 11</option>
+                <option value="iphone11pro">Iphone 11 Pro</option>
+                <option value="iphone11promax">Iphone 11 Pro Max</option>
+                <option value="iphone12mini">Iphone 12 Mini</option>
+                <option value="iphone12">Iphone 12/ 12 Pro</option>
+                <option value="iphone12promax">Iphone 12 Pro Max</option>
+                <option value="iphone13mini">Iphone 13 Mini</option>
+                <option value="iphone13">Iphone 13</option>
+                <option value="iphone13promax">Iphone 13 Pro Max</option>
+                <option value="iphone14">Iphone 14</option>
+                <option value="iphone14plus">Iphone 14 Plus</option>
+                <option value="iphone14pro">Iphone 14 Pro</option>
+                <option value="iphone14promax">Iphone 14 Pro Max</option>
+            </select>
+        </div>
+    )
 }
 
 export default CasesNav
