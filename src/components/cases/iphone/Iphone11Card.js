@@ -4,9 +4,8 @@ function Iphone11Card({iphone}) {
 
   return (
     <div>
-        <h1>Iphone 11 Cases</h1>
-        <img alt='iphone11' src={iphone.image} />
-        <p>{iphone.title}</p>
+        <img alt='iphone11' src={iphone.imgSrc} />
+        <p>{iphone.item}</p>
         <p>{iphone.price}</p>
     </div>
   )
