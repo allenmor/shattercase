@@ -19,7 +19,7 @@ function Iphone14Pro() {
     <div>
       <NavBar />
       <CasesNav />
-      <h1>Iphone 14 Plus cases</h1>
+      <h1>Iphone 14 Pro cases</h1>
       {cases.map((el, i) => {
         return <IphoneCard key={i} iphone={el}/>
       })}
