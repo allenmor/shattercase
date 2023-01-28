@@ -4,7 +4,7 @@ import CasesNav from '../../CasesNav'
 import IphoneCard from './IphoneCard'
 import { useState,useEffect } from 'react'
 
-function Iphone11() {
+function Iphone11Pro() {
 
   const [cases, setCases] = useState([])
   useEffect(()=>{
@@ -12,14 +12,15 @@ function Iphone11() {
     fetch('https://raw.githubusercontent.com/allenmor/shattercase/main/db.json')
     .then(res => res.json())
     .then(data => {
-      setCases(data[0].iphone11)
+      setCases(data[1].iphone11pro)
+      console.log(data);
     })
   },[])
   return (
     <div>
       <NavBar />
       <CasesNav />
-      <h1>Iphone 11 cases</h1>
+      <h1>Iphone X/XS/11 Pro cases</h1>
       {cases.map((el, i) => {
         return <IphoneCard key={i} iphone={el}/>
       })}
@@ -27,4 +28,4 @@ function Iphone11() {
   )
 }
 
-export default Iphone11
+export default Iphone11Pro

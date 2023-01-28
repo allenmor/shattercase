@@ -8,6 +8,7 @@ import ForgotPassword from "./components/ForgotPassword";
 import UpdateProfile from "./components/UpdateProfile";
 import Cases from "./components/Cases";
 import Iphone11 from "./components/cases/iphone/Iphone11";
+import Iphone11Pro from "./components/cases/iphone/Iphone11Pro";
 function App() {
   return (
     <div className="App">
@@ -36,6 +37,7 @@ function App() {
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/cases" element={<Cases />} />
           <Route path="/iphone11" element={<Iphone11 />} />
+          <Route path="/iphone11pro" element={<Iphone11Pro />} />
         </Routes>
       </AuthProvider>
     </div>

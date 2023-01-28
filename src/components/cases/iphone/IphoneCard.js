@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Iphone11Card({iphone}) {
+function IphoneCard({iphone}) {
 
   return (
     <div>
@@ -11,4 +11,4 @@ function Iphone11Card({iphone}) {
   )
 }
 
-export default Iphone11Card
+export default IphoneCard
