@@ -140,6 +140,17 @@ button[type="submit"] {
 .cases-nav-links {
   color: blue;
 }
+.models-div {
+  display: flex;
+}
+.models-div p {
+  margin: 5px;
+  border: 1px solid black;
+  padding: 5px;
+  cursor: pointer;
+  user-select: none;
+  
+}
 /* Media query for screens smaller than 600px */
 @media (max-width: 600px) {
   .nav-links {
