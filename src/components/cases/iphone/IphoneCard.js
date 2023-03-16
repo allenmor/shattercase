@@ -14,4 +14,4 @@ let total = price * 3;
   )
 }
 
-export default IphoneCard
+export default IphoneCard 
