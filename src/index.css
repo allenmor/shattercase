@@ -152,6 +152,21 @@ button[type="submit"] {
   user-select: none;
   
 }
+
+/* PHONE CASES */
+.phone-cases-div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.phone-card-div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 28vw;
+}
+
 /* Media query for screens smaller than 600px */
 @media (max-width: 600px) {
   .nav-links {

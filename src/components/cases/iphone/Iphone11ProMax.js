@@ -16,14 +16,16 @@ function Iphone11ProMax() {
     })
   },[])
   return (
-    <div>
+    <>
       <NavBar />
-      <CasesNav />
-      <h1>Iphone Xs Max/11 Pro Max cases</h1>
-      {cases.map((el, i) => {
-        return <IphoneCard key={i} iphone={el}/>
-      })}
-    </div>
+        <CasesNav />
+      <div className="phone-cases-div">
+        <h1>Iphone 11 cases</h1>
+        {cases.map((el, i) => {
+          return <IphoneCard key={i} iphone={el} />;
+        })}
+      </div>
+    </>
   )
 }
 

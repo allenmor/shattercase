@@ -16,14 +16,16 @@ function Iphone14() {
     })
   },[])
   return (
-    <div>
+    <>
       <NavBar />
-      <CasesNav />
-      <h1>Iphone 14 cases</h1>
-      {cases.map((el, i) => {
-        return <IphoneCard key={i} iphone={el}/>
-      })}
-    </div>
+        <CasesNav />
+      <div className="phone-cases-div">
+        <h1>Iphone 11 cases</h1>
+        {cases.map((el, i) => {
+          return <IphoneCard key={i} iphone={el} />;
+        })}
+      </div>
+    </>
   )
 }
 
