@@ -3,7 +3,7 @@ import React from 'react'
 function IphoneCard({iphone}) {
 
   let price = iphone.price.replace("$", "");
-  let total = price * 5;
+  let total = price * 6;
 
   if (iphone.item.includes("Pack") || iphone.item.includes("Lot") || iphone.item.includes("pcs")) {
     return null;

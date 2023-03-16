@@ -168,8 +168,7 @@ button[type="submit"] {
     background-color: #ffffff;
     border-radius: 20px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin: 20px 0;
+    padding: 44px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -177,7 +176,8 @@ button[type="submit"] {
     align-items: center;
     transition: transform 0.3s ease-in-out;
     width: 5rem;
-    height: 13rem;
+    height: 15rem;
+    padding-top: 0.3rem;
   }
   
   .phone-card-div:before {
@@ -202,8 +202,7 @@ button[type="submit"] {
   }
   
   .phone-card-div img {
-  width: 100%;
-  max-width: 200px;
+
   height: auto;
   margin-bottom: 20px;
   }
