@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
 body {
   margin: 0;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .login-container {
@@ -157,24 +160,155 @@ button[type="submit"] {
 .phone-cases-div {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-}
-.phone-card-div{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 28vw;
-}
-
-/* Media query for screens smaller than 600px */
-@media (max-width: 600px) {
-  .nav-links {
+  justify-content: space-evenly;
+  gap: 20px;
+  }
+  
+  .phone-card-div {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px 0;
+    position: relative;
+    display: flex;
     flex-direction: column;
+    text-align: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+    width: 5rem;
+    height: 13rem;
   }
+  
+  .phone-card-div:before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  }
+  
+  .phone-card-div:hover {
+  transform: translateY(-10px);
+  }
+  
+  .phone-card-div:hover:before {
+  opacity: 1;
+  }
+  
+  .phone-card-div img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+  }
+  
+  .phone-card-div p:first-child {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #555555;
+  }
+  
+  .case-description {
+  font-size: 8px;
+  color: #888888;
+  }
+  
+  .price-description {
+  font-size: 14px;
+  font-weight: bold;
+  color: #444444;
+  }
+  
+  .phone-card-div p:last-child {
+  color: #bbbbbb;
+  margin-top: 10px;
+  }
+  
+  
 
-  .nav-links a {
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
+
+
+/* CASES NAV START  */
+
+.phone-header {
+  color: #3b5998; /* use any blueish color you like */
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 50px;
+  border: 2px solid #3b5998; /* border color matches text color */
+  padding: 20px;
+  background-color: #f7f7f7; /* use any light background color you like */
 }
+
+
+.models-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1c2331;
+  padding: 20px;
+  border-radius: 10px;
+  flex-direction: column;
+  }
+  
+  .models-div h4 {
+  margin-right: 10px;
+  font-size: 24px;
+  color: #fff;
+  }
+  
+  .models-div select {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 18px;
+  background-color: #2e3d57;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-repeat: no-repeat;
+  background-position: right 8px top 50%;
+  cursor: pointer;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 20px;
+  color: #fff;
+  }
+  
+  .models-div select:hover {
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .models-div select:focus {
+  outline: none;
+  box-shadow: 0 0 3px #0077ff;
+  }
+  
+  .models-div select option {
+  background-color: #2e3d57;
+  color: #fff;
+  }
+  
+  @media only screen and (max-width: 768px) {
+  .models-div {
+  max-width: 100%;
+  }
+  }
+  
+  
+
+
+
+/* CASES NAV END */

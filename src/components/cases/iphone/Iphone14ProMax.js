@@ -19,8 +19,8 @@ function Iphone14ProMax() {
     <>
       <NavBar />
         <CasesNav />
+        <h1 className="phone-header">Iphone 11 cases</h1>
       <div className="phone-cases-div">
-        <h1>Iphone 11 cases</h1>
         {cases.map((el, i) => {
           return <IphoneCard key={i} iphone={el} />;
         })}

@@ -1,11 +1,11 @@
-import Signup from "./components/Signup";
+// import Signup from "./components/Signup";
 import { AuthProvider } from "./contexts/AuthContext";
 import { Routes, Route } from "react-router-dom";
-import Dashboard from "./components/Dashboard";
-import Login from "./components/Login";
-import PrivateRoute from "./components/PrivateRoute";
-import ForgotPassword from "./components/ForgotPassword";
-import UpdateProfile from "./components/UpdateProfile";
+// import Dashboard from "./components/Dashboard";
+// import Login from "./components/Login";
+// import PrivateRoute from "./components/PrivateRoute";
+// import ForgotPassword from "./components/ForgotPassword";
+// import UpdateProfile from "./components/UpdateProfile";
 
 import Iphone11 from "./components/cases/iphone/Iphone11";
 import Iphone11Pro from "./components/cases/iphone/Iphone11Pro";
@@ -26,8 +26,7 @@ function App() {
     <div className="App">
       <AuthProvider>
         <Routes>
-          {/* <PrivateRoute exact path="/" element={<Dashboard />}/> */}
-          <Route
+          {/* <Route
             exact
             path="/"
             element={
@@ -43,11 +42,11 @@ function App() {
                 <UpdateProfile />
               </PrivateRoute>
             }
-          ></Route>
-          <Route path="/signup" element={<Signup />} />
+          ></Route> */}
+          {/* <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/forgot-password" element={<ForgotPassword />} />
-          <Route path="/iphone11" element={<Iphone11 />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} /> */}
+          <Route path="/" element={<Iphone11 />} />
           <Route path="/iphone11pro" element={<Iphone11Pro />} />
           <Route path="/iphone11promax" element={<Iphone11ProMax />} />
           <Route path="/iphone12mini" element={<Iphone12Mini />} />

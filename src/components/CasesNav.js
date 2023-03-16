@@ -17,10 +17,16 @@ function CasesNav() {
     }, [location])
 
     function handleChange(e) {
-        navigate(`/${e.target.value}`)
-        setSelected(e.target.value);
-        localStorage.setItem('selected', e.target.value)
-    }
+        const value = e.target.value;
+        setSelected(value);
+        localStorage.setItem('selected', value);
+    
+        if (value === 'iphone11') {
+          navigate('/');
+        } else {
+          navigate(`/${value}`);
+        }
+      }
     
 
     return (
