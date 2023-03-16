@@ -308,6 +308,41 @@ button[type="submit"] {
   
   
 
-
+.color-div {
+padding: 10rem;
+}
 
 /* CASES NAV END */
+
+.color-div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0;
+  margin-bottom: 3rem;
+  background-color: black;
+  color: white;
+  height: 4rem;
+}
+
+.color-div label {
+  font-size: 1.2rem;
+  margin-right: 4rem;
+  white-space: nowrap;
+}
+
+.color-div select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.color-div select:hover,
+.color-div select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #2684ff;
+}
