@@ -19,7 +19,7 @@ function Iphone12Mini() {
     <>
       <NavBar />
         <CasesNav />
-        <h1 className="phone-header">Iphone 11 cases</h1>
+        <h1 className="phone-header">Iphone 12/13 Mini cases</h1>
       <div className="phone-cases-div">
         {cases.map((el, i) => {
           return <IphoneCard key={i} iphone={el} />;
