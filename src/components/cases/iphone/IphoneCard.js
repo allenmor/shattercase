@@ -2,6 +2,7 @@ import React from 'react'
 
 function IphoneCard({iphone}) {
 
+
   let price = iphone.price?.replace("$", "");
   let total = price * 6;
 
