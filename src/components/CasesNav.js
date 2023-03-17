@@ -9,12 +9,12 @@ function CasesNav() {
     useEffect(() => {
         localStorage.setItem('selected', selected)
     }, [selected])
-
     useEffect(() => {
         const pathname = location.pathname.substring(1);
-        setSelected(pathname);
+        setSelected(localStorage.getItem('selected') || pathname);
         localStorage.setItem('selected', pathname)
-    }, [location])
+      }, [location])
+      
 
     function handleChange(e) {
         const value = e.target.value;
