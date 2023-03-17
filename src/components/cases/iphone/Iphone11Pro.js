@@ -12,7 +12,7 @@ function Iphone11Pro() {
     fetch('https://raw.githubusercontent.com/allenmor/shattercase/main/db.json')
     .then(res => res.json())
     .then(data => {
-      setCases(data[1].iphone11pro)
+      setCases(data[8].iphone11pro)
       console.log(data);
     })
   },[])

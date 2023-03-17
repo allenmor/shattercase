@@ -2,16 +2,22 @@ import React, { useState, useEffect } from "react";
 import NavBar from "../../NavBar";
 import CasesNav from "../../CasesNav";
 import IphoneCard from "./IphoneCard";
+import { useLocation } from "react-router-dom";
 
 function Iphone11() {
   const [cases, setCases] = useState([]);
   const [selectedColor, setSelectedColor] = useState("");
+  const [phone, setPhone] = useState('iphone11')
 
+  const location = useLocation();
+  const whichPhone = location.state?.data || "iphone11";
+  console.log(whichPhone);
   useEffect(() => {
     fetch("https://raw.githubusercontent.com/allenmor/shattercase/main/db.json")
       .then((res) => res.json())
       .then((data) => {
-        setCases(data[0].iphone11);
+        setCases(data[7][whichPhone]);
+        console.log(data);
       });
   }, []);
 
@@ -50,6 +56,8 @@ function Iphone11() {
     <>
       <NavBar />
       <CasesNav />
+      <div>{location.state?.data}</div>
+
       <div className="color-div">
         <label htmlFor="color-select">Filter by color:</label>
         <select id="color-select" onChange={handleColorChange}>

@@ -20,9 +20,11 @@ function CasesNav() {
         const value = e.target.value;
         setSelected(value);
         localStorage.setItem('selected', value);
+        console.log(value);
     
         if (value === 'iphone11') {
-          navigate('/');
+          navigate('/', { state: {data: value} });
+          
         } else {
           navigate(`/${value}`);
         }
