@@ -29,8 +29,6 @@ function CasesNav() {
             <h4>Choose Your Device</h4>
             <select value={selected} onChange={handleChange}>
                 <option value="seven">7/8</option>
-                <option value="se2020">SE 2020</option>
-                <option value="se2022">SE 2022</option>
                 <option value="eightplus">7/8 Plus</option>
                 <option value="x">X/XS</option>
                 <option value="xsmax">XS Maxs</option>
