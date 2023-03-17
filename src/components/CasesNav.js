@@ -20,14 +20,7 @@ function CasesNav() {
         const value = e.target.value;
         setSelected(value);
         localStorage.setItem('selected', value);
-        console.log(value);
-    
-        if (value === 'iphone11') {
           navigate('/', { state: {data: value} });
-          
-        } else {
-          navigate(`/${value}`);
-        }
       }
     
 
@@ -35,10 +28,16 @@ function CasesNav() {
         <div className='models-div'>
             <h4>Choose Your Device</h4>
             <select value={selected} onChange={handleChange}>
+                <option value="seven">7/8</option>
+                <option value="se2020">SE 2020</option>
+                <option value="se2022">SE 2022</option>
+                <option value="eightplus">7/8 Plus</option>
+                <option value="x">X/XS</option>
+                <option value="xsmax">XS Maxs</option>
                 <option value="iphone11">Iphone 11</option>
                 <option value="iphone11pro">Iphone 11 Pro</option>
                 <option value="iphone11promax">Iphone 11 Pro Max</option>
-                <option value="iphone12mini">Iphone 12 Mini</option>
+                <option value="mini12">Iphone 12 Mini</option>
                 <option value="iphone12">Iphone 12/ 12 Pro</option>
                 <option value="iphone12promax">Iphone 12 Pro Max</option>
                 <option value="iphone13mini">Iphone 13 Mini</option>

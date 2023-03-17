@@ -7,19 +7,17 @@ import { useLocation } from "react-router-dom";
 function Iphone11() {
   const [cases, setCases] = useState([]);
   const [selectedColor, setSelectedColor] = useState("");
-  const [phone, setPhone] = useState('iphone11')
 
   const location = useLocation();
   const whichPhone = location.state?.data || "iphone11";
-  console.log(whichPhone);
   useEffect(() => {
     fetch("https://raw.githubusercontent.com/allenmor/shattercase/main/db.json")
       .then((res) => res.json())
       .then((data) => {
-        setCases(data[7][whichPhone]);
+        setCases(data[whichPhone]);
         console.log(data);
       });
-  }, []);
+  }, [whichPhone]);
 
   const handleColorChange = (event) => {
     setSelectedColor(event.target.value.toLowerCase());

@@ -8,18 +8,18 @@ import { Routes, Route } from "react-router-dom";
 // import UpdateProfile from "./components/UpdateProfile";
 
 import Iphone11 from "./components/cases/iphone/Iphone11";
-import Iphone11Pro from "./components/cases/iphone/Iphone11Pro";
-import Iphone11ProMax from "./components/cases/iphone/Iphone11ProMax";
-import Iphone12Mini from "./components/cases/iphone/Iphone12Mini";
-import Iphone12 from "./components/cases/iphone/Iphone12";
-import Iphone12ProMax from "./components/cases/iphone/Iphone12ProMax";
-import Iphone13Mini from "./components/cases/iphone/Iphone13Mini";
-import Iphone13 from "./components/cases/iphone/Iphone13";
-import Iphone13ProMax from "./components/cases/iphone/Iphone13ProMax";
-import Iphone14 from "./components/cases/iphone/Iphone14";
-import Iphone14Plus from "./components/cases/iphone/Iphone14Plus";
-import Iphone14Pro from "./components/cases/iphone/Iphone14Pro";
-import Iphone14ProMax from "./components/cases/iphone/Iphone14ProMax";
+// import Iphone11Pro from "./components/cases/iphone/Iphone11Pro";
+// import Iphone11ProMax from "./components/cases/iphone/Iphone11ProMax";
+// import Iphone12Mini from "./components/cases/iphone/Iphone12Mini";
+// import Iphone12 from "./components/cases/iphone/Iphone12";
+// import Iphone12ProMax from "./components/cases/iphone/Iphone12ProMax";
+// import Iphone13Mini from "./components/cases/iphone/Iphone13Mini";
+// import Iphone13 from "./components/cases/iphone/Iphone13";
+// import Iphone13ProMax from "./components/cases/iphone/Iphone13ProMax";
+// import Iphone14 from "./components/cases/iphone/Iphone14";
+// import Iphone14Plus from "./components/cases/iphone/Iphone14Plus";
+// import Iphone14Pro from "./components/cases/iphone/Iphone14Pro";
+// import Iphone14ProMax from "./components/cases/iphone/Iphone14ProMax";
 
 function App() {
   return (
@@ -47,7 +47,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/forgot-password" element={<ForgotPassword />} /> */}
           <Route path="/" element={<Iphone11 />} />
-          <Route path="/iphone11pro" element={<Iphone11Pro />} />
+          {/* <Route path="/iphone11pro" element={<Iphone11Pro />} />
           <Route path="/iphone11promax" element={<Iphone11ProMax />} />
           <Route path="/iphone12mini" element={<Iphone12Mini />} />
           <Route path="/iphone12" element={<Iphone12 />} />
@@ -59,7 +59,7 @@ function App() {
           <Route path="/iphone14" element={<Iphone14 />} />
           <Route path="/iphone14plus" element={<Iphone14Plus />} />
           <Route path="/iphone14pro" element={<Iphone14Pro />} />
-          <Route path="/iphone14promax" element={<Iphone14ProMax />} />
+          <Route path="/iphone14promax" element={<Iphone14ProMax />} /> */}
         </Routes>
       </AuthProvider>
     </div>
