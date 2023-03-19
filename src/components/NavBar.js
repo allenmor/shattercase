@@ -23,12 +23,24 @@ const NavBar = ({email}) => {
       // function handleCasesClick() {
       //     navigate('/iphone11')
       // }
+      function handleCallClick() {
+        window.location.href = `tel:4132734641}`;
+      }
   return (
       <div className='nav'>
           {/* <p>{email}</p> */}
           {/* <p onClick={handleCasesClick}>Cases</p> */}
           {/* {currentUser ? <p onClick={handleUpdateProfileClick}>Update Profile</p>: ''} */}
           {/* <p onClick={handleLogOut}>{currentUser ? 'Log Out': 'Log In'}</p> */}
+          <h1>SHATTER & CASE</h1>
+          <i onClick={handleCallClick} className="fa fa-phone" style={{
+            fontSize: '24px', 
+            backgroundColor: 'black', 
+            padding: '10px',
+            borderRadius: '50%', 
+            color: 'white',
+            margin: 'auto'
+            }}></i>
       </div>
   );
 }
