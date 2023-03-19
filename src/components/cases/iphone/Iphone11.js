@@ -54,8 +54,6 @@ function Iphone11() {
     <>
       <NavBar />
       <CasesNav />
-      <div>{location.state?.data}</div>
-
       <div className="color-div">
         <label htmlFor="color-select">Filter by color:</label>
         <select id="color-select" onChange={handleColorChange}>
