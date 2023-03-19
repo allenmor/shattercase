@@ -39,7 +39,8 @@ const NavBar = ({email}) => {
             padding: '10px',
             borderRadius: '50%', 
             color: 'white',
-            margin: 'auto'
+            margin: 'auto',
+            cursor: 'pointer'
             }}></i>
       </div>
   );

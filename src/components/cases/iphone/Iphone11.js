@@ -55,7 +55,7 @@ function Iphone11() {
       <NavBar />
       <CasesNav />
       <div className="color-div">
-        <label htmlFor="color-select">Filter by color:</label>
+        <label htmlFor="color-select">Filter:</label>
         <select id="color-select" onChange={handleColorChange}>
           {allColors.map((color, i) => (
             <option key={i} value={color.toLowerCase()}>
