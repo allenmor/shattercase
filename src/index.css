@@ -134,7 +134,9 @@ button[type="submit"] {
   position: sticky;
   top: 0;
   background-color: white;
+  z-index: 2;
 }
+
 .nav h1 {
   margin: auto;
 }
