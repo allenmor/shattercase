@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@300;400;500;600;700&display=swap");
 
 body {
   margin: 0;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
 .login-container {
@@ -57,7 +57,6 @@ button[type="submit"] {
   margin-top: 50px;
 }
 
-
 /* DASHBOARD */
 
 .dashboard-container {
@@ -102,7 +101,8 @@ button[type="submit"] {
   width: 90%;
 }
 
-.dashboard input, .dashboard textarea {
+.dashboard input,
+.dashboard textarea {
   padding: 0.5rem;
   margin-bottom: 1rem;
   border: 1px solid gray;
@@ -160,7 +160,6 @@ button[type="submit"] {
   padding: 5px;
   cursor: pointer;
   user-select: none;
-  
 }
 
 /* PHONE CASES */
@@ -169,25 +168,25 @@ button[type="submit"] {
   flex-wrap: wrap;
   justify-content: space-evenly;
   gap: 20px;
-  }
-  
-  .phone-card-div {
-    background-color: #ffffff;
-    border-radius: 20px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-    padding: 44px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    transition: transform 0.3s ease-in-out;
-    width: 5rem;
-    height: 15rem;
-    padding-top: 0.3rem;
-  }
-  
-  .phone-card-div:before {
+}
+
+.phone-card-div {
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  padding: 44px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+  width: 5rem;
+  height: 15rem;
+  padding-top: 0.3rem;
+}
+
+.phone-card-div:before {
   content: "";
   position: absolute;
   top: -20px;
@@ -198,48 +197,43 @@ button[type="submit"] {
   border-radius: 20px;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
-  }
-  
-  .phone-card-div:hover {
-  transform: translateY(-10px);
-  }
-  
-  .phone-card-div:hover:before {
-  opacity: 1;
-  }
-  
-  .phone-card-div img {
+}
 
+.phone-card-div:hover {
+  transform: translateY(-10px);
+}
+
+.phone-card-div:hover:before {
+  opacity: 1;
+}
+
+.phone-card-div img {
   height: auto;
   margin-bottom: 20px;
-  }
-  
-  .phone-card-div p:first-child {
+}
+
+.phone-card-div p:first-child {
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 10px;
   color: #555555;
-  }
-  
-  .case-description {
+}
+
+.case-description {
   font-size: 8px;
   color: #888888;
-  }
-  
-  .price-description {
+}
+
+.price-description {
   font-size: 14px;
   font-weight: bold;
   color: #444444;
-  }
-  
-  .phone-card-div p:last-child {
+}
+
+.phone-card-div p:last-child {
   color: #bbbbbb;
   margin-top: 10px;
-  }
-  
-  
-
-
+}
 
 /* CASES NAV START  */
 
@@ -256,24 +250,23 @@ button[type="submit"] {
   background-color: #f7f7f7; /* use any light background color you like */
 }
 
-
 .models-div {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #1c2331;
-  padding: 20px;
   border-radius: 10px;
   flex-direction: column;
-  }
-  
-  .models-div h4 {
+  padding-bottom: 2rem;
+}
+
+.models-div h4 {
   margin-right: 10px;
   font-size: 24px;
   color: #fff;
-  }
-  
-  .models-div select {
+}
+
+.models-div select {
   padding: 10px;
   border-radius: 5px;
   border: none;
@@ -291,32 +284,30 @@ button[type="submit"] {
   max-width: 400px;
   margin-top: 20px;
   color: #fff;
-  }
-  
-  .models-div select:hover {
+}
+
+.models-div select:hover {
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  .models-div select:focus {
+}
+
+.models-div select:focus {
   outline: none;
   box-shadow: 0 0 3px #0077ff;
-  }
-  
-  .models-div select option {
+}
+
+.models-div select option {
   background-color: #2e3d57;
   color: #fff;
-  }
-  
-  @media only screen and (max-width: 768px) {
+}
+
+@media only screen and (max-width: 768px) {
   .models-div {
-  max-width: 100%;
+    max-width: 100%;
   }
-  }
-  
-  
+}
 
 .color-div {
-padding: 10rem;
+  padding: 10rem;
 }
 
 /* CASES NAV END */
@@ -354,3 +345,143 @@ padding: 10rem;
   box-shadow: 0 0 0 2px #2684ff;
 }
 
+/* BUSINESS CARD CONTAINER START  */
+.business-card-full-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.business-card-container {
+  width: 100vw;
+  border: 1px solid black;
+}
+
+.buy-hours-div {
+  border: 2px solid lightgreen;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 60%;
+}
+.buy-hours-div p {
+  white-space: nowrap;
+}
+.buy-fix-p {
+  font-weight: bold;
+  font-size: 3vw;
+}
+.mall-p {
+  font-weight: bold;
+  color: #ff69b4;
+  font-size: 3vw;
+}
+.customer-service-p {
+  font-weight: bold;
+  color: #d32f2f;
+  font-size: 3vw;
+  text-align: center;
+}
+.number-p {
+  font-weight: bold;
+  font-size: 3vw;
+  text-align: center;
+  color: blue;
+  text-decoration: underline;
+}
+.logo-div {
+  display: flex;
+}
+.email-p {
+  font-weight: bold;
+  color: #4682b4;
+  font-size: 3vw;
+}
+.fa {
+  padding: 20px;
+  font-size: 3vw;
+  width: 3vw;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3b5998;
+  color: white;
+}
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-snapchat-ghost {
+  background: #fffc00;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.available-p {
+  font-size: 2vw;
+}
+.prof-tech-p {
+  font-size: 3vw;
+}
+.shatter-header-p {
+  background-color: #3498db;
+  color: #fff;
+  padding: 20px;
+  text-align: center; 
+  font-size: 25px;
+  font-weight: b;
+}
+.business-card-container {
+  background-image: url("./images/android-iphone-repair.jpg");
+  background-size: cover;
+  background-position: bottom;
+  position: relative;
+  background-size: 45vw;
+  background-repeat: no-repeat;
+}
+.guarentee-div {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.insideBusiness {
+  display: flex;
+}
+.guarentee-img {
+  width: 26vw;
+}
+.guarentee-div p {
+  font-size: 3vw;
+
+}
+.certified-p {
+  text-align: center;
+}
+.cases-button {
+  margin: 1rem;
+  display: inline-block;
+  border-radius: 30px;
+  background-color: #4B9CE2;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.cases-button:hover {
+  background-color: #3477C1;
+  cursor: pointer;
+}
+
+/* BUSINESS CARD CONTAINER END */
