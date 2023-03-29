@@ -50,7 +50,7 @@ function BusinessCard() {
                 ></a>{" "}
                 {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
                 <a
-                  href="https://www.google.com"
+                  href="https://www.facebook.com/ShatterHolyoke/"
                   className="fa fa-snapchat-ghost"
                   aria-label="Visit our Snapchat account"
                 ></a>{" "}
